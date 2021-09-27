@@ -18,6 +18,10 @@ class CustomDetoxEnvironment extends DetoxCircusEnvironment {
       WorkerAssignReporter,
     });
   }
+
+  async initDetox() {
+    return this.detox.init(undefined, {initGlobals: false});
+  }
 }
 
 module.exports = CustomDetoxEnvironment;
